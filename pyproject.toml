@@ -1,0 +1,14 @@
+[project]
+name = "mini-backoff-calculate-decorator"
+version = "0.1.0"
+description = "Applies exponential backoff to a flush callback, halting emission after sink failures."
+requires-python = ">=3.10"
+dependencies = []
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
