@@ -50,3 +50,10 @@ that matters, catch `FlushPaused` first.
 - `backoff_flush(calculator, clock)` returns a decorator.  `clock` is a
   zero-argument callable returning monotonic seconds.
 - `FlushPaused` is raised by the wrapped callback while a pause is active.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
