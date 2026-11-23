@@ -1,6 +1,6 @@
 [project]
 name = "mini-backoff-calculate-decorator"
-version = "0.1.0"
+version = "0.1.1"
 description = "Applies exponential backoff to a flush callback, halting emission after sink failures."
 requires-python = ">=3.10"
 dependencies = []
